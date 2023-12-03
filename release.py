@@ -84,15 +84,15 @@ class ConsoleRedirector:
         self.console_text_widget.see(tk.END)
 
 window = tk.Tk()
-window.title("UC Релизы для школоты")
+window.title("UC Release finder")
 window.geometry("400x300")
 
-category_label = ttk.Label(window, text="Категории:")
+category_label = ttk.Label(window, text="Game Category:")
 category_label.pack()
 category_combobox = ttk.Combobox(window, values=list(urls.keys()))
 category_combobox.pack()
 
-subcategory_label = ttk.Label(window, text="Подкатегории:")
+subcategory_label = ttk.Label(window, text="Subcategory:")
 subcategory_label.pack()
 subcategory_combobox = ttk.Combobox(window, values=[])
 subcategory_combobox.pack()
@@ -110,7 +110,7 @@ category_combobox.bind("<<ComboboxSelected>>", update_subcategories)
 console_text = tk.Text(window, height=10)
 console_text.pack()
 
-select_button = ttk.Button(window, text="Выбрать", command=select_category)
+select_button = ttk.Button(window, text="Find", command=select_category)
 select_button.pack()
 
 window.mainloop()
