@@ -5,6 +5,7 @@ from tkinter import ttk
 import sys
 
 urls = {
+    "OLD": "https://www.unknowncheats.me/forum/tags/release.html",
     "APEX": "https://www.unknowncheats.me/forum/apex-legends/",
     "EFT": "https://www.unknowncheats.me/forum/escape-from-tarkov/",
     "GTA5": "https://www.unknowncheats.me/forum/grand-theft-auto-v/",
@@ -15,7 +16,6 @@ urls = {
     "SOT": "https://www.unknowncheats.me/forum/sea-of-thieves/",
     "TF2": "https://www.unknowncheats.me/forum/team-fortress-2-a/",
     "VALORANT": "https://www.unknowncheats.me/forum/valorant/",
-    "LETHALCOMPANY": "https://www.unknowncheats.me/forum/search.php?searchid=32530467",
     "BATTLEBIT": "https://www.unknowncheats.me/forum/battlebit-remastered/",
     "GMOD": "https://www.unknowncheats.me/forum/garry-s-mod/",
     "COD": {
@@ -45,15 +45,13 @@ urls = {
     "PAYDAYS": {
         "PAYDAY2": "https://www.unknowncheats.me/forum/payday-2-a/",
         "PAYDAY3": "https://www.unknowncheats.me/forum/payday-3-a/"
+    },
+    "OTHERS": {
+        "OTHER1": "https://www.unknowncheats.me/forum/other-fps-games/",
+        "OTHER2": "https://www.unknowncheats.me/forum/other-fps-games/index2.html",
+        "OTHER3": "https://www.unknowncheats.me/forum/other-fps-games/index3.html"
     }
 }
-
-def print_categories(urls):
-    for category in urls:
-        print(f"Category: {category}")
-        if isinstance(urls[category], dict):
-            for subcategory in urls[category]:
-                print(f"  Subcategory: {subcategory}")
 
 def parse_url(url):
     response = requests.get(url)
